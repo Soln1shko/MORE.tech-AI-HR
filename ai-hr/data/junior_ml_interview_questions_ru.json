@@ -1,0 +1,402 @@
+[
+  {
+    "section": "Python",
+    "question": "Чем списковое включение отличается от генератора и когда генератор предпочтительнее?"
+  },
+  {
+    "section": "Python",
+    "question": "Чем отличаются list.copy(), срез list[:] и copy.deepcopy для вложенных структур данных?"
+  },
+  {
+    "section": "Python",
+    "question": "Что такое изменяемые и неизменяемые типы в Python? Примеры и подводные камни."
+  },
+  {
+    "section": "Python",
+    "question": "Как работает контекстный менеджер with? Напишите простой пользовательский контекстный менеджер."
+  },
+  {
+    "section": "Python",
+    "question": "Как правильно обрабатывать исключения в Python? Когда перехватывать, а когда пробрасывать дальше?"
+  },
+  {
+    "section": "Python",
+    "question": "Что дают подсказки типов (type hints) и как их проверять (mypy/pyright)?"
+  },
+  {
+    "section": "Python",
+    "question": "Чем отличаются список, кортеж и множество и когда что использовать?"
+  },
+  {
+    "section": "Python",
+    "question": "Как организовать виртуальное окружение (venv/conda) и управлять зависимостями?"
+  },
+  {
+    "section": "Pandas",
+    "question": "Разница между .loc и .iloc, а также .at и .iat. Примеры использования."
+  },
+  {
+    "section": "Pandas",
+    "question": "Как объединять таблицы: merge vs join vs concat? Когда что использовать?"
+  },
+  {
+    "section": "Pandas",
+    "question": "Как работать с пропусками: dropna, fillna, interpolate, заполнение по группам?"
+  },
+  {
+    "section": "Pandas",
+    "question": "Векторизация vs .apply vs итерации по строкам: влияние на скорость и читаемость."
+  },
+  {
+    "section": "Pandas",
+    "question": "Группировка: как использовать groupby + agg, именованные агрегаты и несколько функций сразу?"
+  },
+  {
+    "section": "Pandas",
+    "question": "Работа с датами/временем: pd.to_datetime, resample, таймзоны, извлечение компонентов даты."
+  },
+  {
+    "section": "NumPy",
+    "question": "Чем массивы NumPy отличаются от списков Python по памяти и операциям?"
+  },
+  {
+    "section": "NumPy",
+    "question": "Что такое broadcasting в NumPy? Приведите пример."
+  },
+  {
+    "section": "NumPy",
+    "question": "Разница между view и copy (reshape, ravel, flatten) и возможные эффекты."
+  },
+  {
+    "section": "NumPy",
+    "question": "Генерация случайных чисел: Generator vs RandomState и фиксация seed."
+  },
+  {
+    "section": "scikit-learn",
+    "question": "Что такое Pipeline и зачем он нужен? Пример: StandardScaler + модель."
+  },
+  {
+    "section": "scikit-learn",
+    "question": "Как работает train_test_split и зачем параметр stratify?"
+  },
+  {
+    "section": "scikit-learn",
+    "question": "Разница между fit, transform и fit_transform на примере препроцессинга."
+  },
+  {
+    "section": "scikit-learn",
+    "question": "GridSearchCV vs RandomizedSearchCV: когда что эффективнее?"
+  },
+  {
+    "section": "scikit-learn",
+    "question": "Для чего нужен ColumnTransformer и когда он особенно полезен?"
+  },
+  {
+    "section": "scikit-learn",
+    "question": "Как сохранять/загружать модели (joblib/pickle) и какие риски безопасности существуют?"
+  },
+  {
+    "section": "scikit-learn",
+    "question": "Как кодировать категориальные признаки (OneHotEncoder/OrdinalEncoder) и избежать target leakage?"
+  },
+  {
+    "section": "ML Basics",
+    "question": "Различие между обучением с учителем и без учителя. Приведите примеры задач."
+  },
+  {
+    "section": "ML Basics",
+    "question": "Что такое переобучение и недообучение? Как их диагностировать на практике?"
+  },
+  {
+    "section": "ML Basics",
+    "question": "Компромисс смещения и дисперсии (bias–variance): объясните на интуитивном уровне."
+  },
+  {
+    "section": "ML Basics",
+    "question": "Что такое регуляризация L1 и L2 и чем они отличаются по эффекту на признаки?"
+  },
+  {
+    "section": "ML Basics",
+    "question": "Какие метрики подходят для классификации, а какие для регрессии? Приведите примеры."
+  },
+  {
+    "section": "ML Basics",
+    "question": "Как выбрать и сформулировать baseline и для чего он нужен?"
+  },
+  {
+    "section": "ML Basics",
+    "question": "Что такое кросс-валидация и зачем она нужна в оценке моделей?"
+  },
+  {
+    "section": "Statistics & Probability",
+    "question": "Среднее, медиана, мода: в чем различия и устойчивость к выбросам?"
+  },
+  {
+    "section": "Statistics & Probability",
+    "question": "Дисперсия и стандартное отклонение: как интерпретировать и когда использовать?"
+  },
+  {
+    "section": "Statistics & Probability",
+    "question": "Интуитивно о законе больших чисел и центральной предельной теореме."
+  },
+  {
+    "section": "Statistics & Probability",
+    "question": "Корреляция Пирсона vs Спирмена: когда какую использовать?"
+  },
+  {
+    "section": "Statistics & Probability",
+    "question": "Что такое p-value и доверительный интервал на интуитивном уровне?"
+  },
+  {
+    "section": "Statistics & Probability",
+    "question": "Базовая формула Байеса: пример в задаче классификации."
+  },
+  {
+    "section": "Statistics & Probability",
+    "question": "Какие распределения вы знаете (Бернулли, биномиальное, нормальное) и где они применяются?"
+  },
+  {
+    "section": "Linear Algebra & Calculus",
+    "question": "Что такое градиент и как он используется при обучении моделей?"
+  },
+  {
+    "section": "Linear Algebra & Calculus",
+    "question": "Матрица признаков X и вектор целей y: какие у них размерности и почему это важно?"
+  },
+  {
+    "section": "Linear Algebra & Calculus",
+    "question": "Что такое SVD и как оно связано с PCA?"
+  },
+  {
+    "section": "Linear Algebra & Calculus",
+    "question": "Нормализация vs стандартизация: математический смысл и влияние на алгоритмы."
+  },
+  {
+    "section": "Data Preprocessing",
+    "question": "Масштабирование признаков: StandardScaler, MinMaxScaler, RobustScaler — различия и применение."
+  },
+  {
+    "section": "Data Preprocessing",
+    "question": "Стратегии обработки пропусков (mean/median/most_frequent и др.) и риск утечки данных."
+  },
+  {
+    "section": "Data Preprocessing",
+    "question": "Кодирование категориальных признаков: one-hot, ordinal, target encoding — плюсы и минусы."
+  },
+  {
+    "section": "Data Preprocessing",
+    "question": "Обработка выбросов: как обнаруживать и что с ними делать?"
+  },
+  {
+    "section": "Data Preprocessing",
+    "question": "Балансировка классов: undersampling/oversampling/SMOTE — когда и зачем."
+  },
+  {
+    "section": "Data Preprocessing",
+    "question": "Как избежать data leakage при препроцессинге в сочетании с кросс-валидацией?"
+  },
+  {
+    "section": "Feature Engineering",
+    "question": "Создание признаков из дат/времени: календарные фичи, лаги, скользящие агрегаты."
+  },
+  {
+    "section": "Feature Engineering",
+    "question": "Когда уместны лог-преобразование, Box-Cox или Yeo-Johnson?"
+  },
+  {
+    "section": "Feature Engineering",
+    "question": "Генерация полиномиальных признаков и взаимодействий: когда помогает, а когда нет."
+  },
+  {
+    "section": "Feature Engineering",
+    "question": "Методы отбора признаков: фильтры, обёртки (RFE), встроенные (L1)."
+  },
+  {
+    "section": "Feature Engineering",
+    "question": "Оценка важности признаков: permutation importance vs feature_importances_."
+  },
+  {
+    "section": "Model Evaluation & Metrics",
+    "question": "Матрица ошибок: как из неё получить precision, recall, F1?"
+  },
+  {
+    "section": "Model Evaluation & Metrics",
+    "question": "ROC-AUC vs PR-AUC: чем отличаются и когда PR-AUC предпочтительнее?"
+  },
+  {
+    "section": "Model Evaluation & Metrics",
+    "question": "Метрики регрессии: MSE, RMSE, MAE, R² — интерпретация и чувствительность к выбросам."
+  },
+  {
+    "section": "Model Evaluation & Metrics",
+    "question": "Как корректно оценивать модель на несбалансированных данных?"
+  },
+  {
+    "section": "Model Evaluation & Metrics",
+    "question": "Что такое метрики ранжирования (например, MAP@k, NDCG) на базовом уровне?"
+  },
+  {
+    "section": "Model Evaluation & Metrics",
+    "question": "Holdout, кросс-валидация и вложенная (nested) кросс-валидация: отличия и применение."
+  },
+  {
+    "section": "Cross-Validation & Experimentation",
+    "question": "Что такое стратифицированная кросс-валидация и когда она нужна?"
+  },
+  {
+    "section": "Cross-Validation & Experimentation",
+    "question": "Как правильно валидироваться во временных рядах (TimeSeriesSplit)?"
+  },
+  {
+    "section": "Cross-Validation & Experimentation",
+    "question": "Почему нельзя масштабировать/импьютировать по всему датасету до кросс-валидации?"
+  },
+  {
+    "section": "Cross-Validation & Experimentation",
+    "question": "Чем отличается офлайн-оценка от онлайн-экспериментов?"
+  },
+  {
+    "section": "A/B Testing",
+    "question": "Нулевая и альтернативная гипотезы: как их сформулировать в A/B-тесте?"
+  },
+  {
+    "section": "A/B Testing",
+    "question": "Как в общих чертах оценить требуемый размер выборки (мощность, MDE)?"
+  },
+  {
+    "section": "A/B Testing",
+    "question": "Что такое p-hacking и как его избежать при анализе экспериментов?"
+  },
+  {
+    "section": "A/B Testing",
+    "question": "Когда использовать t-тест, z-тест или непараметрические тесты (Манна–Уитни)?"
+  },
+  {
+    "section": "SQL",
+    "question": "Разница между INNER, LEFT, RIGHT и FULL OUTER JOIN. Примеры."
+  },
+  {
+    "section": "SQL",
+    "question": "Для чего используются GROUP BY и HAVING и чем HAVING отличается от WHERE?"
+  },
+  {
+    "section": "SQL",
+    "question": "Оконные функции: ROW_NUMBER/RANK/DENSE_RANK с PARTITION BY — пример."
+  },
+  {
+    "section": "SQL",
+    "question": "Подзапросы и CTE: когда они упрощают запрос?"
+  },
+  {
+    "section": "SQL",
+    "question": "Индексы: как помогают ускорять запросы и когда могут мешать?"
+  },
+  {
+    "section": "SQL",
+    "question": "COUNT(*), COUNT(col) и COUNT(DISTINCT col): различия и подводные камни."
+  },
+  {
+    "section": "SQL",
+    "question": "Как находить дубликаты записей и агрегировать их в одном запросе?"
+  },
+  {
+    "section": "Databases",
+    "question": "Нормализация vs денормализация: плюсы, минусы и примеры."
+  },
+  {
+    "section": "Databases",
+    "question": "Что такое транзакции и уровни изоляции на базовом уровне?"
+  },
+  {
+    "section": "Databases",
+    "question": "Чем отличаются OLTP и OLAP системы и где какие применимы?"
+  },
+  {
+    "section": "Git",
+    "question": "Базовый рабочий процесс: clone, branch, add, commit, push, pull, merge — объясните по шагам."
+  },
+  {
+    "section": "Git",
+    "question": "Что такое pull request и чего ожидают от code review?"
+  },
+  {
+    "section": "Git",
+    "question": "Разница между merge и rebase и когда какой подход использовать."
+  },
+  {
+    "section": "Git",
+    "question": "Как разрешать конфликты слияния и проверять историю коммитов (git log, blame)?"
+  },
+  {
+    "section": "Cloud Basics",
+    "question": "Что такое объектное хранилище (S3/GCS) и как работать с ним из Python?"
+  },
+  {
+    "section": "Cloud Basics",
+    "question": "Managed notebooks (SageMaker Studio, Vertex AI, Colab): когда использовать?"
+  },
+  {
+    "section": "Cloud Basics",
+    "question": "Как безопасно хранить ключи и секреты (переменные окружения, менеджеры секретов)?"
+  },
+  {
+    "section": "PyTorch",
+    "question": "Основные компоненты: Tensor, Dataset, DataLoader, nn.Module, Optimizer — роли и связи."
+  },
+  {
+    "section": "PyTorch",
+    "question": "Чем режимы .train() и .eval() отличаются и зачем они нужны?"
+  },
+  {
+    "section": "PyTorch",
+    "question": "Как собрать простой MLP-классификатор: где определить loss и optimizer?"
+  },
+  {
+    "section": "TensorFlow",
+    "question": "tf.data vs обычная загрузка данных: преимущества и базовый конвейер."
+  },
+  {
+    "section": "TensorFlow",
+    "question": "Keras Sequential vs Functional API: когда какой подход удобнее?"
+  },
+  {
+    "section": "TensorFlow",
+    "question": "Как настроить раннюю остановку (EarlyStopping) и чекпоинты (ModelCheckpoint)?"
+  },
+  {
+    "section": "Kaggle",
+    "question": "Как вы начинаете новое соревнование: EDA, baseline и стратегия кросс-валидации?"
+  },
+  {
+    "section": "Kaggle",
+    "question": "Как оформлять ноутбуки и описывать решения для воспроизводимости?"
+  },
+  {
+    "section": "Kaggle",
+    "question": "Как использовать внешние данные, соблюдая правила соревнований?"
+  },
+  {
+    "section": "MLOps & Monitoring",
+    "question": "Что такое воспроизводимость (reproducibility): фиксация seed, версии данных и кода."
+  },
+  {
+    "section": "MLOps & Monitoring",
+    "question": "Как вести логи и трекать эксперименты (MLflow/Weights & Biases) на базовом уровне?"
+  },
+  {
+    "section": "MLOps & Monitoring",
+    "question": "Как задеплоить простую модель как сервис (например, FastAPI): общие шаги."
+  },
+  {
+    "section": "MLOps & Monitoring",
+    "question": "Как мониторить дрейф данных и деградацию качества после релиза?"
+  },
+  {
+    "section": "Ethics & Privacy",
+    "question": "Что относится к персональным данным и какие базовые требования (например, GDPR)?"
+  },
+  {
+    "section": "Ethics & Privacy",
+    "question": "Как снижать риски смещения и дискриминации в данных и моделях?"
+  }
+]

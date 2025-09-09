@@ -1,0 +1,80 @@
+version: '3.8'
+
+networks:
+  moretech-network:
+    driver: bridge
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      target: production
+    container_name: moretech-frontend
+    depends_on:
+      - backend
+      - ai-hr
+      - transcription
+      - tts
+    ports:
+      - "3000:80"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - moretech-network
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: moretech-backend
+    env_file:
+      - .env
+    environment:
+      - FLASK_ENV=production
+      - MONGO_URI=${MONGO_URI}
+      - AI_HR_SERVICE_URL=http://ai-hr:8002
+      - SECRET_KEY=${SECRET_KEY:-change-me}
+    ports:
+      - "5000:5000"
+    networks:
+      - moretech-network
+    restart: unless-stopped
+
+  ai-hr:
+    build:
+      context: ./ai-hr
+      dockerfile: Dockerfile
+    container_name: moretech-ai-hr
+    env_file:
+      - .env
+    environment:
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+    ports:
+      - "8002:8002"
+    networks:
+      - moretech-network
+    restart: unless-stopped
+
+  transcription:
+    build:
+      context: ./transcription
+      dockerfile: Dockerfile
+    container_name: moretech-transcription
+    ports:
+      - "8001:8001"
+    networks:
+      - moretech-network
+    restart: unless-stopped
+
+  tts:
+    build:
+      context: ./tts
+      dockerfile: Dockerfile
+    container_name: moretech-tts
+    ports:
+      - "8003:8003"
+    networks:
+      - moretech-network
+    restart: unless-stopped

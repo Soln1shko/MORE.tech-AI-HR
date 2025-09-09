@@ -1,0 +1,88 @@
+# ================================================
+# 🚀 MoreTech.VTB Frontend - Docker Compose
+# ================================================
+# Конфигурация для разработки и продакшн
+# Включает проксирование к backend сервисам
+# ================================================
+
+version: '3.8'
+
+services:
+  # ================================================
+  # 🎨 Frontend - React приложение
+  # ================================================
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    container_name: moretech-frontend
+    ports:
+      - "3000:80"
+    environment:
+      - NODE_ENV=production
+      # Прокинем Vite env для prod, если понадобится динамика
+      - VITE_API_URL=/api
+      - VITE_WS_TRANSCRIPTION_URL=/ws/voice
+      - VITE_WS_TTS_URL=/ws/speak
+    volumes:
+      # Логи Nginx для отладки
+      - ./logs:/var/log/nginx
+    networks:
+      - moretech-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.frontend.rule=Host(`localhost`)"
+      - "traefik.http.services.frontend.loadbalancer.server.port=80"
+
+  # ================================================
+  # 🔧 Development версия (для разработки)
+  # ================================================
+  frontend-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: builder
+    container_name: moretech-frontend-dev
+    ports:
+      - "3001:3000"
+    environment:
+      - NODE_ENV=development
+      # Для Linux используйте адрес хоста, доступный из контейнера:
+      - VITE_API_URL=http://host.docker.internal:5000
+      - VITE_WS_TRANSCRIPTION_URL=ws://host.docker.internal:8001/ws/voice
+      - VITE_WS_TTS_URL=ws://host.docker.internal:8003/ws/speak
+    volumes:
+      # Для hot reload в разработке
+      - .:/app
+      - /app/node_modules
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - moretech-network
+    command: npm run dev
+    profiles:
+      - dev
+    restart: unless-stopped
+
+# ================================================
+# 🌐 Сеть для связи сервисов
+# ================================================
+networks:
+  moretech-network:
+    driver: bridge
+    name: moretech-network
+
+# ================================================
+# 💾 Тома для логов
+# ================================================
+volumes:
+  frontend-logs:
+    driver: local

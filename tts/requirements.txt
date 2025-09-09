@@ -1,0 +1,4 @@
+coqui-tts==0.27.1
+fastapi
+uvicorn[standard]
+numpy
